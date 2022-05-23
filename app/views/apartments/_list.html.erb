@@ -1,0 +1,3 @@
+<% properties.each_with_index do |pr, index| %>
+    <%= render partial: '/properties/card_property', locals: { property: pr, index: index } %>
+<% end %>

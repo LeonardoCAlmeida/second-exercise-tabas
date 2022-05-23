@@ -1,0 +1,17 @@
+@import "bootstrap";
+@import "properties.scss";
+@import "apartments.scss";
+
+footer div { 
+  min-height: 50px; 
+  margin: 0px !important;
+}
+
+body{ 
+  min-height: 100vh; 
+  margin: 0px !important;
+}
+
+.navbar{
+  height: 60px !important;
+}

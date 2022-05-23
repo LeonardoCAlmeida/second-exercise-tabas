@@ -1,0 +1,89 @@
+// Place all the styles related to the properties controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.prop-code{
+  font-size: 0.875rem;
+  border-radius: 16px;
+}
+
+.carousel-item {
+  width: 500px !important;
+}
+
+.text-middle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.middle-div { 
+  position: absolute;
+  width: 70%;
+  top: 63%;
+  left: 55%;
+  transform: translate(-50%, -50%);
+}
+
+
+.property-photo {
+  height: 580px;
+}
+
+.properties-list-show {
+  padding-top: 500px;
+}
+
+.contact-properties {
+  button {
+    border-radius: 16px;
+  }
+  width: 400px;
+  padding: 20px 40px;
+  left: 45%;
+}
+
+.apartment-description {
+  position: absolute;
+  width: 40%;
+  top: 74%;
+  left: 40%;
+  transform: translate(-50%, -50%);
+}
+
+.text-middle-low {
+  position: absolute;
+  width: 70%;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.select-middle-low {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  width: 70%;
+  top: 70%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.carousel, .carouselExampleIndicators {
+  padding-top: 10px;
+  padding-left: 20px;
+  width: 400px;
+}
+
+.card-property {
+  width: 430px;
+  height: 400px;
+  position: relative;
+  float: left;
+}
+
+.properties-cards {
+  width: auto;
+  height: auto;
+}

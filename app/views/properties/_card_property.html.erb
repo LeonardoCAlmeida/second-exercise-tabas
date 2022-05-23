@@ -1,0 +1,9 @@
+<div class="card card-property mr-4 mb-4">
+      
+  <%= link_to property_path(property, state_id: params[:state_id]) do %>
+  
+    <%= render partial: '/properties/carousel', locals: { property: property, index: index }%>
+    <%= render partial: '/properties/list_item_infos', locals: { property: property } %>
+
+  <% end %>
+</div>

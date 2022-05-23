@@ -1,0 +1,7 @@
+$('#apartments_list').append('<div class="d-flex row justify-content-center pl-4"><%= escape_javascript(render partial:'list', locals: { properties: @properties } )%> </div>');
+
+<% if @properties.total_pages == @properties.current_page %>
+    $("#load_more").hide();
+<% else %>
+    $("#load_more").attr("href", "<%= apartments_path(page: (@properties.current_page + 1)) %>");
+<% end %>

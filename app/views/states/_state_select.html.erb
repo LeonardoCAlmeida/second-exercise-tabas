@@ -1,0 +1,10 @@
+<form action="/<%=params[:controller] %>" accept-charset="UTF-8" method="get"><input name="utf8" type="hidden" value="✓">
+  <div class="input-group mb-2 pt-2">
+    <div class="input-group-prepend border-radius border-right">
+      <label class="input-group-text bg-white border-0" for="state_id">Explore</label>
+    </div>
+    <%= select_tag(:state_id, options_for_select(State.all.map { |state| [state.short_name, state.id]}, params[:state_id]), class: 'btn custom-select border-0', id: 'state_id', prompt: 'Select to filter', onchange: "this.form.submit();")%>
+  </div>
+</form>
+
+

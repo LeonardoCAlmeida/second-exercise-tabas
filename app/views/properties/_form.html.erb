@@ -1,0 +1,8 @@
+<%= form_with(model: property) do |f| %>
+  <div>
+    <%= f.label :photos %>
+    <%= f.file_field :photos, multiple: true %>
+  </div>
+  <%= f.text_field :name%>
+  <%= f.submit 'SUBMIT' %>
+<% end %>
