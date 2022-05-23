@@ -1,4 +1,4 @@
-<div id="carouselExampleIndicators-<%=index%>" class="carousel slide" data-ride="carousel">
+<div id="carouselExampleIndicators-<%=index%>" class="carousel slide">
   <ol class="carousel-indicators">
     <% property.photos.each_with_index do |photo, index| %>
       <li data-target="#carouselExampleIndicators-<%=index%>" class="<%= index == 2 ? 'active' : '' %>" data-slide-to="<%= index %>"></li>
