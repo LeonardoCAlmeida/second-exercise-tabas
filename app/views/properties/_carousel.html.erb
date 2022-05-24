@@ -1,7 +1,7 @@
 <div id="carouselExampleIndicators-<%=index%>" class="carousel slide">
   <ol class="carousel-indicators">
-    <% property.photos.each_with_index do |photo, index| %>
-      <li data-target="#carouselExampleIndicators-<%=index%>" class="<%= index == 2 ? 'active' : '' %>" data-slide-to="<%= index %>"></li>
+    <% property.photos.each_with_index do |photo, i| %>
+      <li data-target="#carouselExampleIndicators-<%=index%>" class="<%= i == 0 ? 'active' : '' %>" data-slide-to="<%= i %>"></li>
     <% end%>
   </ol>
 
@@ -10,10 +10,10 @@
       <%= image_tag url_for(property.photos[2]), class: "d-block", size: '400x300' %>
     </div>
 
-    <% property.photos.each_with_index do |photo, index| %>
-      <% next if index == 2 %>
+    <% property.photos.each_with_index do |photo, ind| %>
+      <% next if photo ==  property.photos[2]%>
       <div class="carousel-item">
-        <%= image_tag photo, class: "d-block -pl", size: '400x300' %>
+        <%= image_tag photo, class: "d-block ", size: '400x300' %>
       </div>
     <% end %>
   </div>

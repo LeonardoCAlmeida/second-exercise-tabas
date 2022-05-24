@@ -12,15 +12,48 @@ body{
   margin: 0px !important;
 }
 
+.h-600{
+  height: 600px;
+  position: absolute;
+}
+
 .navbar{
   height: 60px !important;
 }
 
-.owl-item {
-  width: 500px !important;
+.owl-carousel.owl-theme.owl-loaded.owl-drag{
+  width: 1200px !important;
 }
 
-.owl-carousel.owl-theme.owl-loaded.owl-drag{
-  width: 1500px !important;
+.card.card-property, .owl-item.active{
+  .carousel.slide, img{
+    width: 325px !important;
+    height: 300px;
+    padding-bottom: 30px;
+  }
+  width: 350px !important;
+}
 
+.owl-item.active {
+  margin: 30px;
+}
+
+
+.owl-prev, .owl-next{
+  width: 15px;
+  height: 30px;
+  position: absolute;
+  top: 50%;
+  display: block !important;
+  border:0px solid black;
+}
+
+.owl-prev { left: -20px; }
+.owl-next { right: -50px; }
+.owl-prev i, .owl-next i { 
+  width: 30px;
+  height: 30px;
+  border: 2px solid grey;
+  border-radius: 15px;
+  padding-top: 5px;
 }

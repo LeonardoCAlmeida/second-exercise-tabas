@@ -26,29 +26,42 @@
   transform: translate(-50%, -50%);
 }
 
-
 .property-photo {
-  height: 580px;
+  min-height: 300px;
+  max-height: 580px;
 }
 
 .properties-list-show {
   padding-top: 500px;
 }
 
+.basic-infos{
+  position: relative;
+  padding-top: 450px;
+  left: 18%;
+  height: 200px;
+}
+.aijd{
+  min-height: 1000px;
+}
+
 .contact-properties {
+  height: 300px;
+  position: relative;
+  width: 400px;
+  padding: 20px 40px;
+  margin-top: 440px;
+  left: 50%;
   button {
     border-radius: 16px;
   }
-  width: 400px;
-  padding: 20px 40px;
-  left: 45%;
 }
 
 .apartment-description {
-  position: absolute;
+  position: relative;
+  margin-top: -80px;
   width: 40%;
-  top: 74%;
-  left: 40%;
+  left: 39%;
   transform: translate(-50%, -50%);
 }
 

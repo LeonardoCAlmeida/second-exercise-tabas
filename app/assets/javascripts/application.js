@@ -23,10 +23,12 @@ $(document).ready(function(){
     loop:false,
     margin:0,
     nav:true,
-    autoWidth:true,
+    navText : ['<i class="fa fa-angle-left" aria-hidden="true"></i>','<i class="fa fa-angle-right" aria-hidden="true"></i>'],
+    dots: true,
+    dotsEach: 1,
     responsive:{
         0:{
-            items:1
+            items:3
         },
         600:{
             items:3

@@ -1,31 +1,31 @@
-<div class="property-photo-div"></div> 
-  <%= image_tag @property.photos[2], class: 'w-100 h-30 property-photo'%>
-</div>
 
-<div class="middle-div row">
-  <div>
-    <div class="d-inline-block pt-1 pb-1 px-2 bg-white prop-code font-weight-bold"><%= @property.code %></div>
-    <p class="pt-2 text-muted h5 font-weight-bold"> <%= @property.district_name %> </p>
-    <p class="pt-1 text-white h4 font-weight-bold">   <%= @property.address %>, <%= @property.number %> </p>
-    <div class="row pl-3"> 
-      <i class="fa-solid fa-bed-front"></i> <p class="text-white pr-3"> <%= @property.bedroom_qty rescue '-' %> bed's </p>
-      <i class="fa-solid fa-bed-front"></i> <p class="text-white pr-3"> <%= @property.bathroom_qty rescue '-' %> bath's </p>
+<div class="aijd">
+
+  <%= image_tag @property.photos[2], class: 'w-100 h-600'%>
+  <div class="row">
+  
+    <div class="basic-infos">
+      <div class="d-inline-block pt-1 pb-1 px-2 bg-white prop-code font-weight-bold"><%= @property.code %></div>
+      <p class="pt-2 text-muted h5 font-weight-bold"> <%= @property.district_name %> </p>
+      <p class="pt-1 text-white h4 font-weight-bold">   <%= @property.address %>, <%= @property.number %> </p>
+      <div class="row pl-3"> 
+        <i class="fa-solid fa-bed-front"></i> <p class="text-white pr-3"> <%= @property.bedroom_qty rescue '-' %> bed's </p>
+        <i class="fa-solid fa-bed-front"></i> <p class="text-white pr-3"> <%= @property.bathroom_qty rescue '-' %> bath's </p>
+      </div>
     </div>
-  </div>
-  <div class="card contact-properties d-flex justfy-content-center">
-    <p class="h5 font-weight-bold"> R$<%= @property.price %>/mo </p>
-    <p class="h5 font-weight-bold"> Available <%= @property.available_in.strftime('%d/%b') %> </p>
-    <button class="btn btn-dark p-2 border mb-2">AAAAA</button>
-    <button class="btn p-2 border">whats</button>
-    <%= link_to 'or Contact us', properties_path, class: 'd-flex justify-content-center'%>
-  </div>
-</div>
 
-<div class="apartment-description">
-  <p class="h4 font-weight-bold"> Description </p>
-  <%= @property.description %>
-</div>
+    <div class="card contact-properties">
+      <p class="h5 font-weight-bold"> R$<%= @property.price %>/mo </p>
+      <p class="h5 font-weight-bold"> Available <%= @property.available_in.strftime('%d/%b') %> </p>
+      <button class="btn btn-dark p-2 border mb-2">AAAAA</button>
+      <button class="btn p-2 border">whats</button>
+      <%= link_to 'or Contact us', properties_path, class: 'd-flex justify-content-center'%>
+    </div>
+  
+  </div>
 
-<div class="properties-list-show">
-  <%= render partial: 'list', locals: {properties: @properties} %>
+  <div class="apartment-description">
+    <p class="h4 font-weight-bold"> Description </p>
+    <%= @property.description %>
+  </div>
 </div>
