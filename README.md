@@ -7,17 +7,17 @@
   - 5.2.6
 
 * System dependencies
-    Enviroment to run Ruby on Rails, Database
+  - Enviroment to run Ruby on Rails, Database
   
 * Configuration
-    Fill database.yml with your datas.
-    Install all the gems. (bundle install)
+  - Fill database.yml with your datas.
+  - Install all the gems. (bundle install)
 
 * Database creation
-    Used PostgreSQL
+  - Used PostgreSQL
 
 * Database initialization
-    Run in your terminal
+  - Run in your terminal
       $ rake db:create 
       $ rake db:migrate
       $ rake db:seed
