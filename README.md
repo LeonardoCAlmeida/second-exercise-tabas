@@ -17,7 +17,7 @@
   - Used PostgreSQL
 
 * Database initialization
-  - Run in your terminal
+  - Run in your terminal: </br>
       $ rake db:create </br>
       $ rake db:migrate </br>
       $ rake db:seed </br>
