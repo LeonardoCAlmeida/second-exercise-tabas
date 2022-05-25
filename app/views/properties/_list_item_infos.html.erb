@@ -1,5 +1,8 @@
 <div class="ml-3">
-  <%= property.district_name %></br>
-  <p class="font-weight-bold"><%= "#{property.address}, #{property.number}" %></p>
-  <%= property.state_short_name %></br>
+  <p class="h5 text-muted"> <%= property.district_name %> </p>
+  <p class="font-weight-bold h5 "> <%= "#{property.address}, #{property.number}" %> </p>
+  <div class="d-flex justify-content-between">
+    <p class="font-weight-bold h5"> <%= property.state_short_name %> </p>
+    <p class="font-weight-bold h5 pr-4"> R$ <%= property.price %>.00 </p>    
+  </div>
 </div>

@@ -1,9 +1,9 @@
 class ApartmentsController < ApplicationController
   def index
-    @properties = Property.all.paginate(page: params[:page], per_page: 15)
-    if params[:state_id].present?
-      @properties = Property.all.by_state(params[:state_id]).paginate(page: params[:page], per_page: 12)
-    end
+    @properties = Property.all
+    @properties = Property.all.by_state(params[:state_id]) if params[:state_id].present?
+    @properties = @properties.paginate(page: params[:page], per_page: 15)
+
     respond_to do |format|
       format.html
       format.js

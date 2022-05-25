@@ -12,6 +12,15 @@ body{
   margin: 0px !important;
 }
 
+.row {
+  margin-left: 0px !important;
+  margin-right: 0px !important;
+}
+
+.fa-bed.img , .fa-bath.img, .fa-bath.img{
+  color: white;
+}
+
 .h-600{
   height: 600px;
   position: absolute;
@@ -38,10 +47,10 @@ body{
   margin: 30px;
 }
 
-
 .owl-prev, .owl-next{
-  width: 15px;
+  width: 30px;
   height: 30px;
+  border-radius: 15px !important;
   position: absolute;
   top: 50%;
   display: block !important;
@@ -56,4 +65,12 @@ body{
   border: 2px solid grey;
   border-radius: 15px;
   padding-top: 5px;
+}
+
+.owl-carousel.owl-theme.owl-loaded.owl-drag, .owl-stage, .owl-stage-outer{
+  max-height: 500px !important;
+}
+
+.index-carousel {
+  margin-bottom: 100px;
 }

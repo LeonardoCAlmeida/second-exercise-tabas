@@ -1,25 +1,27 @@
 
-<div class="aijd">
+<div class="properties-show">
 
   <%= image_tag @property.photos[2], class: 'w-100 h-600'%>
   <div class="row">
   
     <div class="basic-infos">
-      <div class="d-inline-block pt-1 pb-1 px-2 bg-white prop-code font-weight-bold"><%= @property.code %></div>
+      <div class="d-inline-block pt-1 pb-1 px-2 bg-white prop-code font-weight-bold"><%= @property.code %> </div>
       <p class="pt-2 text-muted h5 font-weight-bold"> <%= @property.district_name %> </p>
       <p class="pt-1 text-white h4 font-weight-bold">   <%= @property.address %>, <%= @property.number %> </p>
       <div class="row pl-3"> 
-        <i class="fa-solid fa-bed-front"></i> <p class="text-white pr-3"> <%= @property.bedroom_qty rescue '-' %> bed's </p>
-        <i class="fa-solid fa-bed-front"></i> <p class="text-white pr-3"> <%= @property.bathroom_qty rescue '-' %> bath's </p>
+        <i class="fa fa-bed img"></i> <p class="text-white pl-2 pr-3"> <%= @property.bedroom_qty rescue '-' %> beds </p>
+        <i class="fa fa-bath img"></i> <p class="text-white pl-2 pr-3"> <%= @property.bathroom_qty rescue '-' %> baths </p>
+        <i class="fa fa-bath img"></i> <p class="text-white pl-2 pr-3"> <%= @property.sqm rescue '-' %> baths </p>
       </div>
     </div>
 
     <div class="card contact-properties">
-      <p class="h5 font-weight-bold"> R$<%= @property.price %>/mo </p>
-      <p class="h5 font-weight-bold"> Available <%= @property.available_in.strftime('%d/%b') %> </p>
-      <button class="btn btn-dark p-2 border mb-2">AAAAA</button>
-      <button class="btn p-2 border">whats</button>
-      <%= link_to 'or Contact us', properties_path, class: 'd-flex justify-content-center'%>
+      <p class="h5 font-weight-bold"> R$ <%= @property.price %>.00/mo </p>
+      <p class="h5 font-weight-bold"> Available in <%= @property.available_in.strftime('%d/%b') %> </p>
+      <div class="btn border border mb-4"> <i class="fa fa-calendar"> </i> Choose dates </div>
+      <div class="btn btn-dark p-2 mb-2"> Check availability </div>
+      <div class="btn p-2 border"><i class="fa fa-whatsapp"> </i> WhatsApp us</div>
+      <%= link_to 'or Contact us', properties_path, class: 'font-weight-bold mt-2 text-dark d-flex justify-content-center'%>
     </div>
   
   </div>
@@ -27,5 +29,48 @@
   <div class="apartment-description">
     <p class="h4 font-weight-bold"> Description </p>
     <%= @property.description %>
+  </div>
+</div>
+
+<div class="another-infos">
+  <p class="font-weight-bold h5 pb-3">Room Arrangement</p>
+  <div class="row pl-3 room-arrangement">
+    <% (@property.bedroom_qty).times do |i| %>
+      <div class="pl-4 pr-4 pb-4"> 
+        <i class="fa fa-bed"></i> 
+        Queen-size bed / Home office </br>
+        <p> <%= "Bedroom #{i+1}" %> </p>
+      </div>
+    <% end %>
+  </div>
+
+  <p class="font-weight-bold h5 pb-3">Apartment Amenities</p>
+  <div class="row pl-3 apartment-amenities">
+    <div class="table pl-4 pr-4 pb-4 row">
+      <div class="col-4"> <i class="fa fa fa-wifi"></i> Wi-fi </div>
+      <div class="col-4"> <i class="fa fa-television"></i> Smart TV </div>
+      <div class="col-4 pb-4"> <i class="fa fa-coffee"></i> Coffee Machine </div>
+      <div class="col-4"> <i class="fa fa-cutlery"></i> Equipped for cooking </div>
+    </div>
+  </div>
+
+  <p class="font-weight-bold h5 pb-3">Building Features</p>
+  <div class="row pl-3 building-features">
+    <div class="table pl-4 pr-4 pb-4 row">
+      <div class="col-4"> <i class="fa fa-car"></i> Parking </div>
+      <div class="col-4"> <i class="fa fa-paw"></i> Smart TV </div>
+      <div class="col-4 pb-4"> <i class="fa fa-user-plus"></i> Doorman </div>
+    </div>
+  </div>
+
+</div>
+
+<div class="d-flex justify-content-center show-carousel">
+  <div class="owl-carousel owl-theme">
+    <% @properties[0..5].each_with_index do |pr, index| %>
+      <div class="item">
+        <%= render partial: 'card_property', locals: { property: pr, index: index } %>
+      </div>
+    <% end %>
   </div>
 </div>

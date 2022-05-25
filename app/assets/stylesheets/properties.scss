@@ -41,11 +41,20 @@
   left: 18%;
   height: 200px;
 }
-.aijd{
-  min-height: 1000px;
+
+.another-infos{
+  position: relative;
+  width: 100px !important;
+  left: 19%;
+  padding-top: -100px;
+}
+
+.properties-show{
+  min-height: 800px;
 }
 
 .contact-properties {
+  max-width: 300px !important;
   height: 300px;
   position: relative;
   width: 400px;
@@ -99,4 +108,16 @@
 .properties-cards {
   width: auto;
   height: auto;
+}
+
+.show-carousel{
+  margin-bottom: 100px;
+}
+
+.room-arrangement{
+  width: 600px;
+}
+
+div.row.apartment-amenities, div.building-features {
+  width: 800px;
 }
