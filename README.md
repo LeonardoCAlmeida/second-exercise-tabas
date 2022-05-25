@@ -18,6 +18,6 @@
 
 * Database initialization
   - Run in your terminal
-      $ rake db:create 
-      $ rake db:migrate
-      $ rake db:seed
+      $ rake db:create </br>
+      $ rake db:migrate </br>
+      $ rake db:seed </br>
