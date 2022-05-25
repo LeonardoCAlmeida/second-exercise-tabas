@@ -1,25 +1,23 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
 * Ruby version
+  - 2.6.5
+
+* Rails version
+  - 5.2.6
 
 * System dependencies
-
+  - Enviroment to run Ruby on Rails, Database
+  
 * Configuration
+  - Fill database.yml with your datas.
+  - Install all the gems. (bundle install)
 
 * Database creation
+  - Used PostgreSQL
 
 * Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-# second-exercise-tabas
+  - Run in your terminal: </br>
+      $ rake db:create </br>
+      $ rake db:migrate </br>
+      $ rake db:seed </br>
