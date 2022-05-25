@@ -16,9 +16,7 @@ class PropertiesController < ApplicationController
 
   def index
     @properties = Property.all
-    if params[:state_id].present?
-      @properties = Property.all.by_state(params[:state_id])
-    end
+    @properties = Property.all.by_state(params[:state_id]) if params[:state_id].present?
   end
 
   def show
@@ -28,9 +26,7 @@ class PropertiesController < ApplicationController
 
   def properties_controller
     @properties = Property.all
-    if params[:state_id].present?
-      @properties = Property.all.by_state(params[:state_id])
-    end
+    @properties = Property.all.by_state(params[:state_id]) if params[:state_id].present?
   end
 
   private
